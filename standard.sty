@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             Standard packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[unicode]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil,portuguese,english]{babel}
+
+\usepackage{graphicx}
+\usepackage{titlesec}
+
+\usepackage{breqn}
+\usepackage{pdfpages}
+\usepackage{makeidx}
+
+\usepackage{enumerate}
+
+\usepackage{float}
+\usepackage[caption=false]{subfig}
+
+\linespread{1.3} % space between lines
+
+%% redefining \emph{} with bold and italic font
+\DeclareTextFontCommand{\emph}{\bfseries\em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     Font
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[toc,title,page]{appendix}
+\usepackage{ebgaramond}
+\usepackage[ugm]{mathdesign}
+
+\usepackage{subfiles}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       Math packages && Theorem config
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{bbm}  %%% \mathbbm{1} -> identity 1
+\usepackage{bm}  %%% \mathbbm{1} -> identity 1
+\usepackage{amsbsy}  %%% \mathbbm{1} -> identity 1
+
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+
+
+\theoremstyle{remark}
+\newtheorem{exemplo}{Exemplo}[section]
+
+\theoremstyle{definition}
+\newtheorem{observacao}{Observação}[section]
+\newtheorem{definicao}{Definição}[section]
+\newtheorem*{notacao}{Notação}
+
+\theoremstyle{plain}
+\newtheorem{lema}{Lema}[section]
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{proposicao}{Proposição}[section]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Programming Language && algorithm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings} %% language programming code inside LateX
+\usepackage[linesnumbered, ruled, vlined, portuguese]{algorithm2e}
+\SetKwComment{Comment}{$\triangleright$\ }{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              Drawing with Tikz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{matrix,positioning}
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.16}
+\usetikzlibrary{snakes} %% produces curly arrows on tikz
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric} %diamond shape for nodes
+\usetikzlibrary{shapes.callouts}
+%\usepackage{tikzpeople}
+\usetikzlibrary{trees}
+\usetikzlibrary{decorations.pathreplacing, calligraphy}
+\usetikzlibrary{shadings}
+\definecolor{azulClaro}{RGB}{65,105,225}
+
+%\usepackage{pgflibrarysnakes}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        Conditionals inside newcommand
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xifthen} %% gives if conditionals when using newcommand
+\usepackage{ifthen}  %% gives if conditionals when using newcommand
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              TOC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[titles]{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                Math operators
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareMathOperator {\card}{card}
+\DeclareMathOperator {\LI}{L.I.}
+\DeclareMathOperator {\Id}{\mathbbm{1}}
+\DeclareMathOperator {\iid}{i.i.d}
+\DeclareMathOperator {\prob}{\mathbb{P}}
+
+\DeclareMathOperator {\ber}{Bernoulli}
+\DeclareMathOperator {\sgn}{sgn}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\Erro}{Erro}
+
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+
+
+\newcommand{\Seq}[1]{$(#1_i)_{i \in \N_0}$}
+
+
+\newcommand {\ComplexoAbs}[1]{%
+    \ifthenelse{ \isempty{#1} }%
+        { (\mathcal{K}, \mathcal{S}) }%
+        { (\mathcal{K}_{#1}, \mathcal{S}_{#1}) }%
+}
+
+
+\DeclareMathOperator{\definedAs}{\vcentcolon = }
+
+\DeclareMathOperator {\Imagem}{Im}
+
+\DeclareMathOperator {\AMod}{ \operatorname{ \mathbf{A-Mod}}}
+\DeclareMathOperator {\Set}{ \mathbf{Set} }
+\DeclareMathOperator {\Vect}{ \mathbf{Vect}_{\mathbb{K}} }
